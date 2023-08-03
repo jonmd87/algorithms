@@ -2,7 +2,8 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-            int[] arr = createAndFillArray(6);
+            Random random = new Random();
+            int[] arr = createAndFillArray(random.nextInt(10, 50));
             printArray(arr);
             Heapsort heapsort = new Heapsort();
             heapsort.sort(arr);

@@ -12,7 +12,7 @@ public class Heapsort {
 
     private void heapify(int[] arr, int root, int size) {
         int left = root * 2 + 1;     // create the index of left child
-        int right = left + 1;        // create the index of right child
+        int right = root * 2 + 2;        // create the index of right child
         int top = root;              // top of pyramid
         if (left < size && arr[left] > arr[top]) { //compare two numbers, bigger must be on the top
             top = left;
@@ -22,7 +22,7 @@ public class Heapsort {
         }
         if (root != top) { //if value on the top was changed we must check out children
             swap(arr, top, root);
-            heapify(arr, root, size);
+            heapify(arr, top, size);
         }
     }
 
@@ -30,11 +30,5 @@ public class Heapsort {
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;
-    }
-    public static void printArray(int[] arr) {
-        for (int i : arr) {
-            System.out.print(i + " ");
-        }
-        System.out.println();
     }
 }
