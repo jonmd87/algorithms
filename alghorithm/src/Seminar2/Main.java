@@ -1,3 +1,7 @@
+package Seminar2;
+
+import Seminar2.Heapsort;
+
 import java.util.*;
 
 public class Main {

@@ -1,3 +1,5 @@
+package Seminar2;
+
 public class Heapsort {
     public void sort(int[] arr) {
         int size =  arr.length;
